@@ -7,7 +7,10 @@ const Board = () => {
   const [tasks, setTasks] = useState<string[]>([]);
 
   const addTask = (taskTitle: string) => {
-    if (taskTitle.trim() === "") return;
+    if (taskTitle.trim() === "") {
+      alert("Task title cannot be empty");
+      return;
+    }
 
     setTasks((prevTasks) => [...prevTasks, taskTitle]);
     setShowTaskForm(false);
