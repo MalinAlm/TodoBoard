@@ -1,4 +1,5 @@
 import "./Board.css";
+import TaskCard from "../TaskCard/TaskCard";
 
 const Board = () => {
   return (
@@ -7,9 +8,10 @@ const Board = () => {
       <div className="task-column-container">
         <div className="task-column todo-column">
           <h2>Todo</h2>
+          <button className="board-add-task-btn">+ Add task</button>
           <div>
             <ul>
-              <li>Task 1</li>
+              <TaskCard />
             </ul>
           </div>
         </div>
