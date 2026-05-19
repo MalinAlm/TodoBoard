@@ -5,6 +5,14 @@ import { useState } from "react";
 
 const Board = () => {
   const [showTaskForm, setShowTaskForm] = useState(false);
+  const [tasks, setTasks] = useState<string[]>([]);
+
+  const addTask = (taskTitle: string) => {
+    if (taskTitle.trim() === "") return;
+
+    setTasks((prevTasks) => [...prevTasks, taskTitle]);
+    setShowTaskForm(false);
+  }
 
   return (
     <main>
@@ -19,10 +27,12 @@ const Board = () => {
           >
             + Add task
           </button>
-          {showTaskForm && <CreateTaskForm />}
+          {showTaskForm && <CreateTaskForm onCreateTask={addTask} />}
           <div>
             <ul>
-              <TaskCard />
+              {tasks.map((task, index) => (
+                <li key={index}>{task}</li>
+              ))}
             </ul>
           </div>
         </div>

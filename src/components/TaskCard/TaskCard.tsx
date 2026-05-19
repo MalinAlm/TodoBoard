@@ -1,9 +1,13 @@
 import "./TaskCard.css";
 
-const TaskCard = () => {
+type TaskCardProps = {
+  title: string;
+};
+
+const TaskCard = ({ title }: TaskCardProps) => {
   return (
     <li draggable="true" className="task-card">
-      <h3>Task Title</h3>
+      <h3>{title}</h3>
     </li>
   );
 };
