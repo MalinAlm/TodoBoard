@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Board = () => {
   const [showTaskForm, setShowTaskForm] = useState(false);
+  const [taskTitle, setTaskTitle] = useState(false);
 
   return (
     <main>
