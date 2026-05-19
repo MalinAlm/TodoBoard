@@ -50,7 +50,6 @@ As a user, I want to be able to open a webapplication that shows me a Todo board
 - A todo board is displayed when application loads
 - The board contains two columns
 - The application works on desktop
-- There should be error handling and user feedback
 
 
 ## User Story 2
